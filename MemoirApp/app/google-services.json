@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "351713545206",
+    "firebase_url": "https://shridharmemoir-2dd22.firebaseio.com",
+    "project_id": "shridharmemoir-2dd22",
+    "storage_bucket": "shridharmemoir-2dd22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351713545206:android:8eb0ad8cdef27a022455d7",
+        "android_client_info": {
+          "package_name": "com.example.shridharmemoir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351713545206-vvtgmnuli5d4fcdjtocrggm4otesd65e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shridharmemoir",
+            "certificate_hash": "4514b5986db18951c98fcf98d7c6311b7729ec0f"
+          }
+        },
+        {
+          "client_id": "351713545206-t7duq437uob6j4n86itdnsit15c9q0ma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZxmCxngcH1XIXA32cs9io4Ald7smokT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351713545206-t7duq437uob6j4n86itdnsit15c9q0ma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

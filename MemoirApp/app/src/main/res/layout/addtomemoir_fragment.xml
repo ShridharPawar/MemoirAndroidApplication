@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/movieImage"
+        android:layout_width="248dp"
+        android:layout_height="198dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="156dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/movieImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="81dp"
+        android:layout_height="34dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textDateWatched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Date Watched"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieImage"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <!--android:visibility="invisible"-->
+
+    <Button
+        android:id="@+id/dateWatcheddialog"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="#4db6ac"
+        android:textStyle="bold"
+        android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toEndOf="@+id/textDateWatched"
+        app:layout_constraintTop_toBottomOf="@+id/movieImage"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/textCinemaName"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="34dp"
+        android:text="Cinema Name"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTimewatched"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/cinemaspinner"
+        android:layout_width="213dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintStart_toEndOf="@+id/textCinemaName"
+        app:layout_constraintTop_toBottomOf="@+id/timepicker"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <TextView
+        android:id="@+id/textMemory"
+        android:layout_width="85dp"
+        android:layout_height="24dp"
+        android:text="My Memory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherCinema"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <EditText
+        android:id="@+id/memory"
+        android:layout_width="247dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="36dp"
+        android:textStyle="bold"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="120dp"
+        android:ems="10"
+        android:hint="Enter your memory"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textMemory"
+        app:layout_constraintTop_toBottomOf="@+id/otherCinema"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/ratingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating Score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMemory"
+        app:layout_constraintVertical_bias="0.175" />
+
+    <RatingBar
+        android:id="@+id/memoirRating"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="80dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="88dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toEndOf="@+id/ratingtext"
+        app:layout_constraintTop_toBottomOf="@+id/memory"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/memoirBtton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Add to Memory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/datewatched"
+        android:layout_width="123dp"
+        android:textStyle="bold"
+        android:layout_height="28dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toEndOf="@+id/dateWatcheddialog"
+        app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/textTimewatched"
+        android:layout_width="100dp"
+        android:layout_height="23dp"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        android:text="Time Watched"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDateWatched"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/timepicker"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:background="#4db6ac"
+        android:drawableLeft="@android:drawable/ic_lock_idle_alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toEndOf="@+id/textTimewatched"
+        app:layout_constraintTop_toBottomOf="@+id/dateWatcheddialog"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/timeWatched"
+        android:layout_width="126dp"
+        android:layout_height="32dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cinemaspinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toEndOf="@+id/timepicker"
+        app:layout_constraintTop_toBottomOf="@+id/datewatched"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <Button
+        android:id="@+id/otherCinema"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Cinema"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCinemaName"
+        app:layout_constraintVertical_bias="0.068" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

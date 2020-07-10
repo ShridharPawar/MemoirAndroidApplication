@@ -1,0 +1,68 @@
+CREATE TABLE Person (
+    PersonId INTEGER not null primary key,
+    FirstName VARCHAR(20) not null,
+    SurName VARCHAR(20) not null,
+    Gender VARCHAR(10),
+    Dob VARCHAR(20),
+    Address VARCHAR(50) not null,
+    State VARCHAR(3) CHECK(State in ('NSW', 'QLD', 'SA', 'TAS', 'VIC', 'WA', 'ACT', 'NT')),
+    PostCode VARCHAR(4) not null
+);
+
+
+CREATE TABLE Credential (
+    CredentialId INTEGER not null primary key,
+    PersonId INTEGER not null,
+    UserName VARCHAR(40) not null,
+    PasswordHash VARCHAR(50) not null,
+    SignUpDate VARCHAR(20) not null,
+    Foreign Key (PersonId) REFERENCES Person(PersonId)
+);
+
+
+CREATE TABLE Cinema (
+  CinemaId INTEGER not null primary key,
+  CinemaName VARCHAR(50) not null,
+  Location VARCHAR(4) not null
+);
+
+
+CREATE TABLE Memoir (
+    MemoirId INTEGER not null primary key,
+    PersonId INTEGER not null,
+    CinemaId INTEGER not null,
+    MovieName VARCHAR(50) not null,
+    MovieReleaseDate VARCHAR(20) not null,
+    DateTimeWatched VARCHAR(20) not null,
+    Comment VARCHAR(400),
+    UserRating double not null,
+    Foreign Key (PersonId) REFERENCES Person(PersonId),
+   Foreign Key (CinemaId) REFERENCES Cinema(CinemaId) 
+);
+
+insert into Person Values(1,'Shridhar','Pawar','Male','1995-08-18','Unit 5 11 Park Avenue,Glenhuntly','VIC','3163');
+insert into Person Values(2,'Vaishnavi','Bulbule','Female','1995-06-27', '58 Almond Street,Caulfield South','VIC','3162');
+insert into Person Values(3,'Shruti','Jadhav','Female','1995-08-31','5 Swanson Street,Melbourne Central','VIC','3161');
+
+insert into Credential Values(1,1,'shridhar18pawar@gmail.com','d382816a3cbeed082c9e216e7392eed1','2014-03-20');
+insert into Credential Values(2,2,'vaishnavi.bulbule95@gmail.com','1fc1ca9b1efd73c758c41ec5b8345cc9','2016-03-21');
+insert into Credential Values(3,3,'shrujadhav30@gmail.com','0ddb884d2a0378917153d5a2ede8a505','2018-03-22');
+
+insert into Cinema values(1,'Classic Cinema','3185');
+insert into Cinema values(2,'Kino Cinemas','3000');
+insert into Cinema values(3,'Village Cinemas Crown','3006');
+insert into Cinema values(4,'The Astor Theatre','3182');
+insert into Cinema values(5,'Village Cinemas Rivoli','3123');
+
+insert into Memoir values(1,1,1,'Black Hawk Down','2001-12-28','2019-02-28 16:30:00','This movie made me cry.',5);
+insert into Memoir values(2,2,2,'Pulp Fiction','1994-11-24','2020-03-04 09:30:00','Still weird!',3);
+insert into Memoir values(3,1,4,'The Lion King','1994-06-15','1996-03-19 11:30:00','Nice animated movie.',5);
+insert into Memoir values(4,1,4,'Shawshank Redemption','1994-09-23','2018-03-19 11:30:00','Wonderful thriller.',4);
+insert into Memoir values(5,1,2,'Extraction','2020-04-24','2020-04-27 15:57:00','Amazing',3.5);
+insert into Memoir values(6,1,1,'Bad Boys for Life','2020-01-15','2020-01-18 18:30:00','This one is okayish.',2.5);
+insert into Memoir values(7,1,5,'The Way Back','2020-03-05','2020-03-18 03:10:00','Drama movie.',2.5);
+insert into Memoir values(8,1,1,'Spenser Confidential','2020-03-06','2020-05-04 06:02:00','Good!',4.5);
+insert into Memoir values(9,1,3,'The Invisible Man','2020-02-26','2020-05-12 10:55:00','Woah!',5);
+insert into Memoir values(10,1,3,'Fantasy Island','2020-02-12','2020-05-13 17:00:00','Mysterious',3.5);
+insert into Memoir values(11,1,2,'Harry Potter and the Philosopher''s Stone','2001-11-16','2020-02-26 13:05:00','Nostalgic',4.5);
+insert into Memoir values(12,1,4,'The Lion King','2019-07-12','2020-05-29 15:51:00','Nice remake!',4);

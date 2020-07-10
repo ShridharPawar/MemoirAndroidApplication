@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">My Movie Memoir</string>
+    <string-array name="state_array">
+    <item>VIC</item>
+    <item>NSW</item>
+    <item>TAS</item>
+    <item>QLD</item>
+    <item>WA</item>
+    <item>NT</item>
+    <item>SA</item>
+    <item>ACT</item>
+</string-array>
+    <string-array name="year">
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+    </string-array>
+ <string-array name="genres">
+      <item>All</item>
+      <item>Action</item>
+     <item>Adventure</item>
+     <item>Animation</item>
+      <item>Comedy</item>
+     <item>Crime</item>
+     <item>Documentary</item>
+     <item>Drama</item>
+     <item>Family</item>
+     <item>Fantasy</item>
+     <item>History</item>
+     <item>Horror</item>
+     <item>Music</item>
+     <item>Mystery</item>
+     <item>Romance</item>
+     <item>Science Fiction</item>
+     <item>TV Movie</item>
+     <item>War</item>
+     <item>Western</item>
+    </string-array>
+
+    <string name="firstnameerror">First name should be between 1 and 20 characters and should be just letters.</string>
+    <string name="lastnameerror">Last name should be between 1 and 20 characters and should be just letters.</string>
+    <string name="addresserror">Address should be between 1 and 50 characters.</string>
+    <string name="postcodeerror">Postcode should not be blank and should have exactly 4 numbers.</string>
+    <string name="passworderror">Password should not be blank.</string>
+    <string name="emailerror">Please enter a valid email address.</string>
+    <string name="cinemanameerror">Cinema name should be between 1 and 50 characters.</string>
+    <string name="cinemapostcodeerror">Postcode should not be blank and should have exactly 4 numbers.</string>
+    <string name="memoirdateerror">Please enter a valid date.</string>
+    <string name="memoirtimeerror">Please select a valid time.</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+
+
+
+
+</resources>
