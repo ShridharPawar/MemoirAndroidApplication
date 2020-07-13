@@ -1,3 +1,4 @@
+Google drive link to the demo video of my project: https://drive.google.com/drive/u/0/folders/1_1rylow4saD-Xt083pgKBnD0GdU5_-GF
 
 It is an Android Application developed using Android Studio. I developed the front-end using XML and back-end using JAVA. Server-side is developed in Netbeans and it interacts with the client-side using REST architecture. Data is stored on Firebase cloud. Some part of the data is stored locally in SQLite database. This feature has been developed using the observer pattern and livedata. This application has following features:
 
